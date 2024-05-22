@@ -7,6 +7,7 @@
 int registro() //Função responável por cadastrar o usuários no sistema
 {
 	//Inicio da criação de variáveis/strisg
+	int opcao=0;
 	char arquivo[12];
 	char cpf[12];
 	char nome[60];
@@ -59,6 +60,26 @@ int registro() //Função responável por cadastrar o usuários no sistema
 		fprintf(file, "Cargo: ");
 		fprintf(file,cargo); // Armazena a string coletada no arquivo
 		fclose(file); // Fecha o arquivo
+	
+	system("cls");
+		
+	printf("Deseja adicionar mais um usu�rio?\n");
+	printf("\n \t1 - Sim");
+	printf("\n \t2 - N�o");
+	printf("\n\n\n Op��o: ");
+	scanf("%d", &opcao);
+	
+	system ("cls");
+	
+		switch(opcao)
+		{
+			case 1:
+			registro();
+			break;
+			
+			case 2:
+			break;
+		}
 }
 
 int consulta()
