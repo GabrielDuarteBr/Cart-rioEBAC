@@ -30,7 +30,7 @@ int registro() //Função responável por cadastrar o usuários no sistema
 			fclose(file);
 	
 	printf("Digite o nome a ser cadastrado: "); //Coletando unformações do usuário
-	scanf("%s", nome); //%s reere-se a strings
+	scanf("%s", nome); //%s refere-se a strings
 	
 		file = fopen(arquivo, "a"); //Entra no arquivo já existente para registrar uma nova informação
 		fprintf(file, "Nome: ");
@@ -134,7 +134,8 @@ int main()
 		printf("Escolha a opção desejada no menu:\n\n");
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
-		printf("\t3 - Deletar nomes\n\n\n");
+		printf("\t3 - Deletar nomes\n");
+		printf("\n\t4 - Sair do sistema\n\n\n");
 		printf("Opção: ");//Fim do menu
 	
 		scanf("%d", &opcao);//Armazenando a escolha do unuário
@@ -154,6 +155,11 @@ int main()
 			case 3:
 			deletar();
 			break;
+			
+			case 4:
+            printf("Obrigado por utiliazar o sistema!\n");
+            return 0;
+            break;
 			
 			default:
 			printf("Esta opção não está disponivel!\n\n");
